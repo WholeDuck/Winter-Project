@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "winter-project",
+	"version": "${version}",
+	"name": "Winter Project",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/winter-project/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"wholeduck.winterproject.WinterProject"
+		],
+		"client": [
+			"wholeduck.winterproject.WinterProjectClient"
+		],
+		"fabric-datagen": [
+			"wholeduck.winterproject.datagen.WinterProjectDataGenerator"
+		]
+	},
+	"mixins": [
+		"winter-project.mixins.json",
+		{
+			"config": "winter-project.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.3",
+		"minecraft": "~26.1-",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
